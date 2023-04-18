@@ -1,0 +1,12 @@
+._1Fm4m:after {
+  height: 84px;
+}
+
+html[dir] ._1Fm4m:after {
+  background-color: #172797;
+}
+
+.app-wrapper-web ._1jJ70 {
+  top: 84px;
+  height: calc(100% - 110px);
+}

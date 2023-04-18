@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+        }
+        body{
+          font-family: Arial, sans-serif;
+          font-size: 75%;
+          width: 210px;
+          padding: 10px;
+          -moz-user-select: none;
+          user-select: none;
+        }
+        hr{
+          border: 0.5px solid #dedede;
+          margin: 10px 0;
+        }
+        img{
+          float: left;
+          margin-left: 10px;
+          margin-right: 15px;
+        }
+        h1{
+          font-size: larger;
+          margin-bottom: 5px;
+          display: block;
+        }
+        h2{
+          font-size: small;
+          display: inline-block;
+        }
+        p{
+          font-size: small;
+          padding: 10px 5px;
+          border-top: 1px solid #dedede;
+        }
+        button {
+          height: 25px;
+          width: 70px;
+          outline: none;
+          margin-bottom: 15px;
+        }
+        a{
+          color: #00587f;
+          text-decoration: none;
+        }
+        a:hover{
+          text-decoration: underline;
+        }
+        #footer{
+          clear: both;
+        }
+        #footer p{
+          padding: 0;
+          padding-top: 13px;
+          font-size: smaller;
+          text-align: center;
+        }
+        #popupMessage{
+          font-size: small;
+          line-height: 1.7em;
+        }
+        #popupMessageButton{
+          float: right;
+          margin: 10px;
+        }
+        input[type=checkbox]{
+          height: 0;
+          width: 0;
+          visibility: hidden;
+          position: absolute;
+        }
+        label {
+          cursor: pointer;
+          text-indent: -9999px;
+          width: 40px;
+          height: 20px;
+          background: #cacaca;
+          display: block;
+          border-radius: 100px;
+          position: relative;
+          top: -2px;
+          float: right;
+        }
+        label:after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 5px;
+          width: 10px;
+          height: 10px;
+          background: #fff;
+          border-radius: 90px;
+          transition: 0.3s;
+        }
+        input:checked + label {
+          background: #25d366;
+        }
+        input:checked + label:after {
+          left: calc(100% - 5px);
+          transform: translateX(-100%);
+        }
+        label:active:after {
+          width: 10px;
+        }
+        label[for="switch"]{
+          margin-right: 5px;
+        }
+      </style>
+    </head>
+    <body>
+      <img src="../images/icon32.png" alt="">
+      <h1>E-commerce Extension<br>For WhatsApp Web</h1>
+      <hr>
+      <span id="mainContent">
+        <h2 style="margin-bottom: 10px;">Toggle</h2><input type="checkbox" id="switch" /><label for="switch">Toggle</label><br>
+        <h2 style="margin-top: 10px;margin-bottom: 5px;">Settings</h2>
+        <p>NavBar<input type="checkbox" id="messages"><label for="messages" title="Blurs all messages in the chat."> NavBar</label></p>
+      </span>
+      <span id="popupMessage"></span>
+      <div id="footer">
+        <p><a href="mailto:contato@leonardoanjos.com" title="Dúvidas ou Sugestões: contato@leonardoanjos.com" target="_blank">Dúvidas ou Sugestões</a> - <a href="https://leonardo-anjos.github.io/" title="by Leonardo Anjos" target="_blank">Author</a>
+        <br>v<span id="version">1.0.0</span></p>
+      </div>
+      <script src="popup.js"></script>
+    </body>
+  </html>
